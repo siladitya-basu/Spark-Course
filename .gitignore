@@ -1,0 +1,4 @@
+Data/**
+Notebooks/Includes/**
+Notebooks/metastore_db/**
+Notebooks/derby.log
