@@ -70,7 +70,7 @@ The following shows installation and some troubleshooting instructions for Apach
 
     >If `sshd` is not running, start it with `systemctl start sshd`.
 
-    You will be asked for your password. Enter it to open the connection. Type exit to close the connection.
+    You will be prompted for your password. Enter it to open the connection. Type exit to close the connection.
 
 7. Go to **Configuration** in the [Arch wiki](https://wiki.archlinux.org/title/Apache_Spark) and make necessary changes.
 
