@@ -98,6 +98,8 @@ The following shows installation and some troubleshooting instructions for Apach
     > My `pyspark` and `spark-sql` shells were failing to start even though `spark-shell` could start. Checking error logs, I found that I had OpenJDK version 18 set as default. Spark can only use upto OpenJDK version 11. Changed OpenJDK version using `archlinux-java`.
 
     > Errors while running `spark-sql`. Ran as root.
+    
+You should be able to start a Spark cluster, a Spark shell and access the UI.
 
 ![spark-setup](./Includes/images/spark-setup.jpg)
 
