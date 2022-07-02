@@ -5,7 +5,7 @@
 - Clone this repo
 - Download dataset
 - Set data paths
-- Install Apace Spark
+- Install Apache Spark
 
 &nbsp;
 ### Clone this repo
