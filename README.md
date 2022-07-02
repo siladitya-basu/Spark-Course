@@ -99,6 +99,8 @@ The following shows installation and some troubleshooting instructions for Apach
 
     > Errors while running `spark-sql`. Ran as root.
 
+![spark-setup](./Includes/images/spark.jpg)
+
 10. (Recommended) Set up a virtual environment for Spark-Course.
     1. Install `pip`.
         ```
