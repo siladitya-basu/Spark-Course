@@ -88,6 +88,9 @@ The following shows installation and some troubleshooting instructions for Apach
     ```
     sudo ./start-worker.sh spark://<machine-name>:<port>
     ```
+
+    The Spark UI should be available at `localhost:4040`.
+
     (To stop them, use the `stop-*.sh` scripts.)
 
 9. Check if `spark-shell` (Scala), `pyspark` (Python), and `spark-sql` (SQL) run without errors (might have multiple warnings). Use `:quit`, `quit()`, or `quit;`, repectively, to exit these shells.
