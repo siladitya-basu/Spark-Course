@@ -43,25 +43,18 @@ The following shows installation and some troubleshooting instructions for Apach
 
 1. Make sure Python, Scala, and JDK are installed.
 
-2. Install Hadoop. (I'm using `paru` but any AUR helper such as `yay` or `aura` could be used.)
-    ```
-    paru hadoop
-    ```
-
-3. Configure Hadoop as shown in the [Arch wiki](https://wiki.archlinux.org/title/Hadoop). See the **Configuration** section.
-
-4. Run the following to check if there are any errors.
+2. Run the following to check if there are any errors.
     ```
     hadoop version
     ```
     > I was getting the following error from `/etc/profile.d/perlbin.sh`: `append_path: commmand not found`. Copied the function `append_path` from `/etc/profile` script to `perlbin.sh`.
 
-5. Install Apache Spark.
+3. Install Apache Spark.
     ```
     paru apache-spark
     ```
 
-6. Install `openssh`. Make sure the service is running and you can connect to port 22.
+4. Install `openssh`. Make sure the service is running and you can connect to port 22.
 
     ```
     systemctl status sshd
@@ -72,9 +65,9 @@ The following shows installation and some troubleshooting instructions for Apach
 
     You will be prompted for your password. Enter it to open the connection. Type exit to close the connection.
 
-7. Go to **Configuration** in the [Arch wiki](https://wiki.archlinux.org/title/Apache_Spark) and make necessary changes.
+5. Go to **Configuration** in the [Arch wiki](https://wiki.archlinux.org/title/Apache_Spark) and make necessary changes.
 
-8. Run 
+6. Run 
     ```
     cd /opt/apache-spark/sbin
     sudo ./start-master.sh
@@ -93,7 +86,7 @@ The following shows installation and some troubleshooting instructions for Apach
 
     (To stop them, use the `stop-*.sh` scripts.)
 
-9. Check if `spark-shell` (Scala), `pyspark` (Python), and `spark-sql` (SQL) run without errors (might have multiple warnings). Use `:quit`, `quit()`, or `quit;`, repectively, to exit these shells.
+7. Check if `spark-shell` (Scala), `pyspark` (Python), and `spark-sql` (SQL) run without errors (might have multiple warnings). Use `:quit`, `quit()`, or `quit;`, repectively, to exit these shells.
 
     > My `pyspark` and `spark-sql` shells were failing to start even though `spark-shell` could start. Checking error logs, I found that I had OpenJDK version 18 set as default. Spark can only use upto OpenJDK version 11. Changed OpenJDK version using `archlinux-java`.
 
@@ -103,7 +96,7 @@ You should be able to start a Spark cluster, a Spark shell and access the UI.
 
 ![spark-setup](./Includes/images/spark-setup.jpg)
 
-10. (Recommended) Set up a virtual environment for Spark-Course.
+8. (Recommended) Set up a virtual environment for Spark-Course.
     1. Install `pip`.
         ```
         paru python-pip
